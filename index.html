@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chikkamagaluru Trip 2026</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200');
+    background-size:cover;
+    background-position:center;
+}
+
+header h1{
+    font-size:4rem;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.2rem;
+    margin-bottom:20px;
+}
+
+.btn{
+    background:#22c55e;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+section{
+    padding:60px 20px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+input,button{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+}
+
+button{
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>CHIKKAMAGALURU</h1>
+    <p>Ride To Explore • Trip To Remember</p>
+    <a href="#book" class="btn">Book Now</a>
+</header>
+
+<section>
+    <div class="container">
+        <h2>Trip Highlights</h2>
+        <br>
+        <div class="cards">
+            <div class="card">
+                <h3>🌄 Mullayanagiri</h3>
+                <p>Highest peak in Karnataka with amazing views.</p>
+            </div>
+
+            <div class="card">
+                <h3>☕ Coffee Estates</h3>
+                <p>Explore beautiful coffee plantations.</p>
+            </div>
+
+            <div class="card">
+                <h3>🏞 Waterfalls</h3>
+                <p>Visit scenic waterfalls and enjoy nature.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Gallery</h2>
+        <br>
+
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600">
+        </div>
+    </div>
+</section>
+
+<section id="book">
+    <div class="container">
+        <h2>Book Your Seat</h2>
+        <br>
+
+        <form onsubmit="bookTrip(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 THE CODE SQUAD | Chikkamagaluru Trip</p>
+</footer>
+
+<script>
+function bookTrip(e){
+    e.preventDefault();
+    alert("Registration Submitted Successfully!");
+}
+</script>
+
+</body>
+</html>
